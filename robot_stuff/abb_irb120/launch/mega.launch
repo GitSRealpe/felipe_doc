@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find abb_irb120)/launch/irb120_gazebo.launch"/>
+  <include file="$(find abb_irb120)/launch/irb120_moveit.launch"/>
+  <include file="$(find abb_irb120_commander)/launch/irb120_commander.launch"/>
+
+
+</launch>
