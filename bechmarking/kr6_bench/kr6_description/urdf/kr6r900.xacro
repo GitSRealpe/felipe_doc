@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<robot name="kuka_kr6r900" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- gripper files -->
+  <xacro:include filename="$(find gripper)/urdf/gripper.xacro"/>
+
+    <link name="base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/visual/base_link.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/collision/base_link.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/visual/link_1.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/collision/link_1.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6r900sixx/visual/link_2.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6r900sixx/collision/link_2.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_3">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/visual/link_3.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/collision/link_3.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_4">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6r900sixx/visual/link_4.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6r900sixx/collision/link_4.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_5">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/visual/link_5.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/collision/link_5.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_6">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/visual/link_6.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://kr6_description/meshes/kr6_agilus/collision/link_6.stl" />
+        </geometry>
+      </collision>
+    </link>
+
+
+    <joint name="joint_a1" type="revolute">
+      <origin xyz="0 0 0.400" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_1"/>
+      <axis xyz="0 0 -1"/>
+      <limit effort="1000" lower="${-3.1416/180 * 170}" upper="${3.1416/180 * 170}" velocity="${3.1416/180 * 360}"/>
+    </joint>
+    <joint name="joint_a2" type="revolute">
+      <origin xyz="0.025 0 0" rpy="0 0 0"/>
+      <parent link="link_1"/>
+      <child link="link_2"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="1000" lower="${-3.1416/180 * 190}" upper="${3.1416/180 * 45}" velocity="${3.1416/180 * 300}"/>
+    </joint>
+    <joint name="joint_a3" type="revolute">
+      <origin xyz="0.455 0 0" rpy="0 0 0"/>
+      <parent link="link_2"/>
+      <child link="link_3"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="1000" lower="${-3.1416/180 * 120}" upper="${3.1416/180 * 156}" velocity="${3.1416/180 * 360}"/>
+    </joint>
+    <joint name="joint_a4" type="revolute">
+      <origin xyz="0 0 0.035" rpy="0 0 0"/>
+      <parent link="link_3"/>
+      <child link="link_4"/>
+      <axis xyz="-1 0 0"/>
+      <limit effort="1000" lower="${-3.1416/180 * 185}" upper="${3.1416/180 * 185}" velocity="${3.1416/180 * 381}"/>
+    </joint>
+    <joint name="joint_a5" type="revolute">
+      <origin xyz="0.420 0 0" rpy="0 0 0"/>
+      <parent link="link_4"/>
+      <child link="link_5"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="1000" lower="${-3.1416/180 * 120}" upper="${3.1416/180 * 120}" velocity="${3.1416/180 * 388}"/>
+    </joint>
+    <joint name="joint_a6" type="revolute">
+      <origin xyz="0.080 0 0" rpy="0 0 0"/>
+      <parent link="link_5"/>
+      <child link="link_6"/>
+      <axis xyz="-1 0 0"/>
+      <limit effort="1000" lower="${-3.1416/180 * 350}" upper="${3.1416/180 * 350}" velocity="${3.1416/180 * 615}"/>
+    </joint>
+
+    <!--tool_joint-->
+    <joint name="joint_a6-tool0" type="fixed">
+      <parent link="link_6"/>
+      <child link="gripper_body"/>
+      <origin xyz="0 0 0" rpy="0 ${3.1416/180 * 90} 0"/>
+    </joint>
+
+    <!-- tcp link -->
+  	<link name="tcp_link"/>
+  	<joint name="tcp_joint" type="fixed">
+  		<parent link="link_6"/>
+  		<child link="tcp_link"/>
+  		<origin rpy="0 0 0" xyz="0.24 0 0"/>
+  	</joint>
+
+</robot>
