@@ -22,7 +22,7 @@
   <!-- load joint states topic for moveit interface -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="false"/>
-    <rosparam param="source_list">[/joint_states]</rosparam>
+    <rosparam param="source_list">[/egm/joint_states]</rosparam>
   </node>
   <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" /> -->
 
@@ -37,10 +37,7 @@
     <arg name="load_robot_description" value="$(arg load_robot_description)"/>
   </include>
 
-  <!-- Run Rviz and load the default config to see the state of the move_group node -->
-  <!-- <include file="$(find irb140_moveit_bin_pick)/launch/moveit_rviz.launch"></include> -->
-
   <!-- Show in Rviz -->
-	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kmr_iiwa)/config/moveit.rviz"/> -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find abb_irb120)/config/moveit.rviz"/>
 
 </launch>
