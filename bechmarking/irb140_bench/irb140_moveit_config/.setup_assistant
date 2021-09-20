@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: irb140_description
+    relative_path: urdf/irb140.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/irb140.srdf
+  CONFIG:
+    author_name: srealper
+    author_email: srealper@unal.edu.co
+    generated_timestamp: 1629233499
