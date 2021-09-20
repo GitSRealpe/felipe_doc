@@ -1,0 +1,39 @@
+benchmark_config:
+    warehouse:
+        host: 127.0.0.1
+        port: 33829
+        scene_name: task_scene     # Required
+    parameters:
+        name: task_scene_bin_to_shelf
+        runs: 5
+        group: irb140_arm       # Required
+        timeout: 5
+        output_directory: bench_results/irb140_results
+        queries: bin_to_shelf
+        start_states: start_bin
+    planning_pipelines:
+        - name: ompl
+          planners:
+            # - RRT         #1
+            # - RRTConnect  #1
+            # - RRTstar     #1
+            # - TRRT        #1
+            # - BiTRRT        #2
+            # - LBTRRT      #bug
+            - PRM           #2
+            # - PRMstar       #2
+            # - LazyPRM       #2
+            # - LazyPRMstar
+            # - LBKPIECE
+            # - BKPIECE
+            # - KPIECE
+            # - EST
+            # - BiEST
+            # - ProjEST
+            # - FMT
+            # - BFMT
+            # - PDST
+            # - SBL
+            # - STRIDE
+            # - SPARS
+            # - SPARStwo
