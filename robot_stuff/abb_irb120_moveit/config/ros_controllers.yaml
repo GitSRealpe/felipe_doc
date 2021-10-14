@@ -23,7 +23,8 @@ joint_state_controller:
   publish_rate: 50
 controller_list:
   # - name: arm120_controller
-  - name: egm/joint_trajectory_controller
+  # - name: egm/joint_trajectory_controller
+  - name: arm_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
