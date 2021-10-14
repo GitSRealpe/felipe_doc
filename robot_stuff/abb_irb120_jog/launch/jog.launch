@@ -1,0 +1,8 @@
+<launch>
+
+    <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+      <param name="parameter_ns" type="string" value="servo_server" />
+      <rosparam ns="servo_server" command="load" file="$(find abb_irb120_jog)/config/jog_config.yaml" />
+    </node>
+
+</launch>
