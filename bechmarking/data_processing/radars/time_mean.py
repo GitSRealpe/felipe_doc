@@ -2,7 +2,7 @@ import sqlite3
 import numpy as np
 import plotly.graph_objects as go
 
-con = sqlite3.connect('benchmark.db')
+con = sqlite3.connect('../benchmark.db')
 cur = con.cursor()
 
 planners=["RRTConnect", "PRM", "RRT", "LazyPRM", "LBKPIECE", "BKPIECE", "KPIECE", "EST"]

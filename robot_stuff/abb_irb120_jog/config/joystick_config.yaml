@@ -1,9 +1,36 @@
-axis_linear: 1
-scale_linear: 0.7
-scale_linear_turbo: 1.5
-
-axis_angular: 0
-scale_angular: 0.4
-
-enable_button: -1  # LB shoulder button
-enable_turbo_button: 5  # RB shoulder button
+teleop:
+  cartesian_twist_command:
+    type: topic
+    message_type: geometry_msgs/TwistStamped
+    topic_name: servo_server/delta_twist_cmds
+    axis_mappings:
+      -
+        axis: 0
+        target: twist.linear.x
+        scale: 0.5
+        offset: 0
+      -
+        axis: 1
+        target: twist.linear.y
+        scale: 0.5
+        offset: 0
+      -
+        axis: 7
+        target: twist.linear.z
+        scale: 0.5
+        offset: 0
+      -
+        axis: 3
+        target: twist.angular.x
+        scale: 1
+        offset: 0
+      -
+        axis: 4
+        target: twist.angular.y
+        scale: 1
+        offset: 0
+      -
+        axis: 6
+        target: twist.angular.z
+        scale: 1
+        offset: 0
