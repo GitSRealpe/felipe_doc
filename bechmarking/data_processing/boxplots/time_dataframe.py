@@ -36,5 +36,7 @@ print(df)
 
 
 print("irb_140 \n", df["irb_140"].describe(),"\n")
-print("kr6 \n", df["kr6"].describe(),"\n")
-print("ur5 \n", df["ur5"].describe(),"\n")
+print("mean \n", df["irb_140"].mean(),"\n")
+df.mean().to_csv("tabla.csv")
+# print("kr6 \n", df["kr6"].describe(),"\n")
+# print("ur5 \n", df["ur5"].describe(),"\n")
