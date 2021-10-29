@@ -3,8 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.graph_objects as go
+import plotly
 
-con = sqlite3.connect('../benchmark.db')
+con = sqlite3.connect('../data/bench3/benchmark3.db')
 
 planners=["RRTConnect", "PRM", "RRT", "LazyPRM", "LBKPIECE", "BKPIECE", "KPIECE", "EST"]
 robots=[(1,"irb_140","orangered"),(3,"kr6","olivedrab"),(5,"ur5","royalblue")]
@@ -28,6 +29,8 @@ fig.update_layout(
     boxmode='group' # group together boxes of the different traces for each value of x
 )
 
-fig.write_html("tiempo.html")
+fig.write_html("tiempo3.html")
+
+plotly.io.write_image(fig,"timebox.pdf", format="pdf", width=100, height=100)
 
 fig.show()
