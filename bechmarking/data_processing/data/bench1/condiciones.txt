@@ -1,2 +1,0 @@
-5 segundos timeout
-pathshortening TRUE
