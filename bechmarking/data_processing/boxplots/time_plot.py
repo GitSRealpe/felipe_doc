@@ -28,7 +28,7 @@ for robot in robots:
     ))
 
 fig.update_layout(
-    yaxis_title='Computation Time',
+    yaxis_title='<b>Computation Time</b>',
     font=dict(
         family="Courier New, monospace",
         # size=18,

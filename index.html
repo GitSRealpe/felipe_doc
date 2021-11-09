@@ -11,6 +11,118 @@
   <h3><b>Computation time boxplots, 5 seconds timeout, 100 runs, no PathSimplification</b></h3>
   <embed type="text/html" src="https://gitsrealpe.github.io/felipe_doc/bechmarking/data_processing/boxplots/tiempo3.html" width="100%" height="650"/>
 
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:0;margin:0px auto;}
+  .tg td{background-color:#fdf6e3;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
+    font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{background-color:#657b83;border-color:#93a1a1;border-style:solid;border-width:1px;color:#fdf6e3;
+    font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-2bhk{background-color:#eee8d5;border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-pcu1{background-color:#657b83;border-color:inherit;color:#fdf6e3;font-weight:bold;text-align:center;vertical-align:top}
+  .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+  .tg .tg-cub0{background-color:#657b83;border-color:inherit;color:#fdf6e3;font-weight:bold;text-align:center;vertical-align:top}
+  .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+  .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+  <div class="tg-wrap"><table class="tg">
+  <thead>
+    <tr>
+      <th class="tg-c3ow" rowspan="2"></th>
+      <th class="tg-7btt" colspan="3">RRT</th>
+      <th class="tg-7btt" colspan="3">RRTConnect</th>
+      <th class="tg-7btt" colspan="3">PRM</th>
+      <th class="tg-7btt" colspan="3">LazyPRM</th>
+      <th class="tg-7btt" colspan="3">KPIECE</th>
+      <th class="tg-7btt" colspan="3">BKPIECE</th>
+      <th class="tg-7btt" colspan="3">LBKPIECE</th>
+      <th class="tg-7btt" colspan="3">EST</th>
+    </tr>
+    <tr>
+      <th class="tg-cub0">irb140</th>
+      <th class="tg-pcu1">kr6</th>
+      <th class="tg-cub0">ur5</th>
+      <th class="tg-pcu1">irb140</th>
+      <th class="tg-cub0">kr6</th>
+      <th class="tg-pcu1">ur5</th>
+      <th class="tg-cub0">irb140</th>
+      <th class="tg-pcu1">kr6</th>
+      <th class="tg-cub0">ur5</th>
+      <th class="tg-pcu1">irb140</th>
+      <th class="tg-cub0">kr6</th>
+      <th class="tg-pcu1">ur5</th>
+      <th class="tg-cub0">irb140</th>
+      <th class="tg-pcu1">kr6</th>
+      <th class="tg-cub0">ur5</th>
+      <th class="tg-pcu1">irb140</th>
+      <th class="tg-cub0">kr6</th>
+      <th class="tg-pcu1">ur5</th>
+      <th class="tg-cub0">irb140</th>
+      <th class="tg-pcu1">kr6</th>
+      <th class="tg-cub0">ur5</th>
+      <th class="tg-pcu1">irb140</th>
+      <th class="tg-cub0">kr6</th>
+      <th class="tg-pcu1">ur5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-fymr">PathSimplification</td>
+      <td class="tg-2bhk">13.3</td>
+      <td class="tg-0pky">8.72</td>
+      <td class="tg-2bhk">8.06</td>
+      <td class="tg-0pky">13.3</td>
+      <td class="tg-2bhk">10.7</td>
+      <td class="tg-0pky">11.49</td>
+      <td class="tg-2bhk">15.3</td>
+      <td class="tg-0pky">12.09</td>
+      <td class="tg-2bhk">14</td>
+      <td class="tg-0pky">13.6</td>
+      <td class="tg-2bhk">9.77</td>
+      <td class="tg-0pky">10.76</td>
+      <td class="tg-2bhk">14.7</td>
+      <td class="tg-0pky">12.39</td>
+      <td class="tg-2bhk">15.27</td>
+      <td class="tg-0pky">15.3</td>
+      <td class="tg-2bhk">12.35</td>
+      <td class="tg-0pky">19.22</td>
+      <td class="tg-2bhk">16.8</td>
+      <td class="tg-0pky">13.24</td>
+      <td class="tg-2bhk">20.76</td>
+      <td class="tg-0pky">14.8</td>
+      <td class="tg-2bhk">11.83</td>
+      <td class="tg-0pky">13.01</td>
+    </tr>
+    <tr>
+      <td class="tg-fymr">NoPathSimplification</td>
+      <td class="tg-2bhk">30.99</td>
+      <td class="tg-0pky">36.6</td>
+      <td class="tg-2bhk">17.58</td>
+      <td class="tg-0pky">19.61</td>
+      <td class="tg-2bhk">24.8</td>
+      <td class="tg-0pky">29.05</td>
+      <td class="tg-2bhk">26.93</td>
+      <td class="tg-0pky">28.8</td>
+      <td class="tg-2bhk">46.9</td>
+      <td class="tg-0pky">22.66</td>
+      <td class="tg-2bhk">21.31</td>
+      <td class="tg-0pky">26.9</td>
+      <td class="tg-2bhk">166.04</td>
+      <td class="tg-0pky">337.55</td>
+      <td class="tg-2bhk">144.2</td>
+      <td class="tg-0pky">284.21</td>
+      <td class="tg-2bhk">481.85</td>
+      <td class="tg-0pky">529.95</td>
+      <td class="tg-2bhk">443.23</td>
+      <td class="tg-0pky">711.14</td>
+      <td class="tg-2bhk">3768.26</td>
+      <td class="tg-0pky">116</td>
+      <td class="tg-2bhk">62.15</td>
+      <td class="tg-0pky">46.5</td>
+    </tr>
+  </tbody>
+  </table></div>
+
   <h3><b>Computation time boxplots, 100 seconds timeout, 100 runs, no PathSimplification</b></h3>
   <embed type="text/html" src="https://gitsrealpe.github.io/felipe_doc/bechmarking/data_processing/boxplots/tiempo4.html" width="100%" height="650"/>
 

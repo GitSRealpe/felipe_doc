@@ -2,7 +2,9 @@ import sqlite3
 import numpy as np
 import plotly.graph_objects as go
 
-con = sqlite3.connect('../data/bench2/benchmark2.db')
+num=3
+
+con = sqlite3.connect('../data/bench%d/benchmark%d.db' % (num,num))
 cur = con.cursor()
 
 planners=["RRTConnect", "PRM", "RRT", "LazyPRM", "LBKPIECE", "BKPIECE", "KPIECE", "EST"]
@@ -18,7 +20,7 @@ for robot in robots:
 
     for planner in planners:
 
-        cur.execute('SELECT waypoints FROM runs WHERE request_planner_id="%s" AND experimentid=%d AND success=1' % (planner,robot[0]))
+        cur.execute('SELECT length FROM runs WHERE request_planner_id="%s" AND experimentid=%d AND success=1' % (planner,robot[0]))
         rows = cur.fetchall()
         lista=[]
 
@@ -73,7 +75,7 @@ for robot in robots:
     ))
 
 fig.update_layout(
-  title="Mean trajectory waypoints",
+  title="Mean trajectory length",
   title_font_family="Times New Roman",
   title_font_color="red",
   title_font_size=30,
@@ -87,6 +89,6 @@ fig.update_layout(
   showlegend=True
 )
 
-fig.write_html("waypoints2.html")
+fig.write_html("waypoints"+str(num)+".html")
 
 fig.show()
