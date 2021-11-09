@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly
 
-num=4
+num=3
 
 con = sqlite3.connect('../data/bench%d/benchmark%d.db' % (num,num))
 
